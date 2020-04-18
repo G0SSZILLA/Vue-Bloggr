@@ -1,5 +1,4 @@
 <template>
-    
 
 <div class="create-blog col-6 m-auto pb-5">
         <!-- Card -->
@@ -9,17 +8,17 @@
     <!-- Title -->
     <h4 class="card-title text-center "><a>Start Blogging!</a></h4>
     <!-- Text -->
-    <p class="card-text shadow"><input
-        type="text"
-        class="form-control"
-        placeholder="Blog Title..."
-        v-model="newBlog.title"/>
-        <input
-        type="text"
-        class="form-control"
-        placeholder="Blog Body..."
-        v-model="newBlog.body"/>
-        </p>
+      <p class="card-text shadow"><input
+         type="text"
+          class="form-control"
+          placeholder="Blog Title..."
+          v-model="newBlog.title"/>
+         <input
+         type="text"
+          class="form-control"
+         placeholder="Blog Body..."
+         v-model="newBlog.body"/>
+      </p>
     <!-- Button -->
     <button type="button" class="btn btn-primary" @click="addBlog()">Add Blog</button>
 
@@ -27,35 +26,7 @@
 
 </div>
 </div>
-<!-- Card -->
-
-  <!-- <div class="form-group">
-      <div class="col-6">
-
-      <label for></label>
-      <input
-        type="text"
-        class="form-control"
-        placeholder=""
-        v-model="newBlog.title"/>
-        <input
-        type="text"
-        class="form-control"
-        placeholder=""
-        v-model="newBlog.body"/>
-            <input
-        type=""
-        class="form-control"
-        placeholder=""
-        v-model="newBlog.imgUrl"/>
-
-      </div>
-        
-    </div> -->
-    <!-- <button type="button" class="btn btn-primary" @click="addBlog()">Add Blog</button> -->
-
 </template>
-
 
 <script>
 export default {

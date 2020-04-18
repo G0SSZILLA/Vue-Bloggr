@@ -11,7 +11,6 @@
   </div>
 </template>
 
-
 <script>
 import CreateBlog from '../components/CreateBlog.vue'
 import Blog from '../components/blog.vue'
