@@ -44,6 +44,16 @@
             >Profile</router-link
           >
         </li>
+  <li
+          class="nav-item"
+          v-if="$auth.isAuthenticated"
+          :class="{ active: $route.name == 'Blogs' }"
+        >
+          <router-link class="nav-link" :to="{ name: 'Blogs' }"
+            >Blogs</router-link
+          >
+        </li>
+
       </ul>
       <span class="navbar-text">
         <button

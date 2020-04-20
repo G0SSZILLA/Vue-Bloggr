@@ -1,6 +1,6 @@
 <template>
 
-    <div class="col-4 blog">
+    <div class="col-4 blog" @click="selectBlog()">
 
         <div class="card card-cascade wider mb-4">
 
@@ -35,8 +35,11 @@ export default {
     computed:{},
 
     methods:{
-        getBlogs(){
-            this.$store.commit('Blogs', {})
+        selectBlog(){
+            this.$router.push({
+                name:'Blog',
+                params: { blogId: this.blogData._id}
+            })
         }
     },
     components:{}
