@@ -51,14 +51,14 @@ export default new Vuex.Store({
             }
         },
 
-        // async addComment({ commit, dispatch }) {
-        //     try {
-        //         let res = await api.post('blogs', newBlog)
-        //         dispatch('getcomment')
-        //     } catch (error) {
-        //         console.error(error)
-        //     }
-        // },
+        async addComment({ dispatch }, newComment) {
+            try {
+                let res = await api.post('comments/', newComment)
+                dispatch('getBlog', newComment.blogId)
+            } catch (error) {
+                console.error(error)
+            }
+        },
 
         async addBlog({ commit, dispatch }, newBlog) {
             try {
@@ -77,6 +77,25 @@ export default new Vuex.Store({
                 console.error(error)
             }
         },
+
+        async deleteComment({ dispatch }, comment) {
+            try {
+                let res = await api.delete('comments/' + comment.id)
+                    // dispatch('getBlog', commentId.blogId)
+            } catch (error) {
+                console.error(error);
+            }
+        },
+
+        // async editComment({ commit, dispatch }, commentId) {
+        //     try {
+        //         let res = await api.delete('comment/' + commentId.id, commentId)
+        //         commit('setBlog', res.data)
+        //         dispatch('getBlog', commentId.blogId)
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // },
 
         async getBlogs({ commit, dispatch }) {
             try {

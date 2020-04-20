@@ -33,14 +33,21 @@ export default {
         return {}
     },
     computed:{},
-
+//    mounted() {
+//     this.$store.dispatch("getBlog", this.$route.params.blogId);
+//   },
     methods:{
         selectBlog(){
             this.$router.push({
                 name:'Blog',
                 params: { blogId: this.blogData._id}
             })
-        }
+        },
+    //       deleteBlog() {
+    //   this.$store.dispatch("deleteBlog",this.$route.params.blogId);
+    //   this.$router.push({ name: "Home" });
+
+    // }
     },
     components:{}
 }
