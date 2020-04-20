@@ -1,59 +1,46 @@
 <template>
+  <div class="col-4 blog" @click="selectBlog()">
+    <div class="card card-cascade wider mb-4">
+      <div class="view view-cascade overlay">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
 
-    <div class="col-4 blog" @click="selectBlog()">
+      <div class="card-body card-body-cascade text-center shadow">
+        <h5 class="blue-text pb-2">
+          <strong>{{blogData.title}}</strong>
+        </h5>
+        <hr />
 
-        <div class="card card-cascade wider mb-4">
-
-            <div class="view view-cascade overlay">
-                <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-
-                <div class="card-body card-body-cascade text-center shadow">
-
-                <h5 class="blue-text pb-2"><strong>{{blogData.title}}</strong></h5>
-                <hr>
-
-                <h4 class="card-title"><strong>{{blogData.creator.name}}</strong></h4>
-
-                </div>
-
-        </div>
-
+        <h4 class="card-title">
+          <strong>{{blogData.creator.name}}</strong>
+        </h4>
+      </div>
     </div>
-
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'Blog',
-    props: ['blogData'],
-    data(){
-        return {}
-    },
-    computed:{},
-//    mounted() {
-//     this.$store.dispatch("getBlog", this.$route.params.blogId);
-//   },
-    methods:{
-        selectBlog(){
-            this.$router.push({
-                name:'Blog',
-                params: { blogId: this.blogData._id}
-            })
-        },
-    //       deleteBlog() {
-    //   this.$store.dispatch("deleteBlog",this.$route.params.blogId);
-    //   this.$router.push({ name: "Home" });
-
-    // }
-    },
-    components:{}
-}
+  name: "Blog",
+  props: ["blogData"],
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {
+    selectBlog() {
+      this.$router.push({
+        name: "Blog",
+        params: { blogId: this.blogData._id }
+      });
+    }
+  },
+  components: {}
+};
 </script>
 
 
 <style scoped>
-
 </style>
