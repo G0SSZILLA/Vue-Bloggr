@@ -6,17 +6,18 @@
           <h3>{{commentData.body}}</h3>
           <p>{{commentData.creator.name}}</p>
           <hr />
+
           <button
             v-if="$auth.userInfo.email == commentData.creator.email"
             class="btn btn-danger shadow"
             @click="deleteComment()"
-          >Delete</button>
+          >Delete Comment</button>
 
           <button
             v-if="$auth.userInfo.email == commentData.creator.email"
             class="btn btn-warning shadow"
             @click="editing = !editing"
-          >Edit</button>
+          >Edit Comment</button>
         </div>
 
         <form v-else @submit.prevent="editComment">
@@ -26,7 +27,7 @@
             v-if="$auth.userInfo.email == commentData.creator.email"
             class="btn btn-success shadow"
             @click="editing = !editing"
-          >Confirm</button>
+          >Accept</button>
         </form>
       </div>
     </div>
@@ -43,24 +44,15 @@ export default {
       editing: true
     };
   },
-  computed: {
-    //         blog(){
-    //             return this.$store.state.activeBlog.blog
-    //         },
-    // comments(){
-    //     return this.$store.state.activeBlog.comments
-    // },
-  },
-    // mounted(){
-    //     this.$store.dispatch("getBlog", this.$route.params.blogId)
-    // },
+  computed: {},
+ 
   methods: {
-            editComment(){
-                console.log(this.commentData);
-                
-                this.$store.dispatch('editComment',this.commentData)
-                this.editing = true
-            },
+    editComment() {
+      console.log(this.commentData);
+
+      this.$store.dispatch("editComment", this.commentData);
+      this.editing = true;
+    },
     deleteComment() {
       this.$store.dispatch("deleteComment", this.commentData);
     }

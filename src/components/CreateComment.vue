@@ -10,10 +10,10 @@
           required
           placeholder="comment here..."
         />
+        <button type="sumbit" class="btn btn-success">Send</button>
+      
+      
       </div>
-      <span>
-        <button type="sumbit" class="btn btn-success">Comment</button>
-      </span>
     </form>
   </div>
 </template>
