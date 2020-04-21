@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4 blog" @click="selectBlog()">
+  <div class=" blog col-4" @click="selectBlog()">
     <div class="card card-cascade wider mb-4">
       <div class="view view-cascade overlay">
         <a href="#!">
