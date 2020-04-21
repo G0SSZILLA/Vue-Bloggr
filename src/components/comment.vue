@@ -2,30 +2,35 @@
   <div class="comment container-fluid">
     <div class="row">
       <div class="col-10 text-center m-auto">
-        <div v-if="editing" class="card card-body shadow">
+        <div v-if="editing" class="card card-body bg-secondary shadow">
           <h3>{{commentData.body}}</h3>
           <p>{{commentData.creator.name}}</p>
           <hr />
 
-          <button
-            v-if="$auth.userInfo.email == commentData.creator.email"
-            class="btn btn-danger shadow"
-            @click="deleteComment()"
-          >Delete Comment</button>
+          <div class="row">
+            <div class="col-6 m-auto text-center">
+              <button
+                v-if="$auth.userInfo.email == commentData.creator.email"
+                class="btn btn-danger shadow"
+                @click="deleteComment()"
+              >Delete Comment</button>
+            </div>
+          </div>
 
-          <button
-            v-if="$auth.userInfo.email == commentData.creator.email"
-            class="btn btn-warning shadow"
-            @click="editing = !editing"
-          >Edit Comment</button>
+          <div class="col-6 m-auto pt-2">
+            <button
+              v-if="$auth.userInfo.email == commentData.creator.email"
+              class="btn btn-warning shadow"
+              @click="editing = !editing"
+            >Edit Comment</button>
+          </div>
         </div>
-
         <form v-else @submit.prevent="editComment">
           <input type="text" v-model="commentData.body" />
           <button
             type="button"
             v-if="$auth.userInfo.email == commentData.creator.email"
-            class="btn btn-success shadow"
+            class="btn btn-primary shadow"
             @click="editing = !editing"
           >Accept</button>
         </form>
@@ -45,7 +50,7 @@ export default {
     };
   },
   computed: {},
- 
+
   methods: {
     editComment() {
       console.log(this.commentData);

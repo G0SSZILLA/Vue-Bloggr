@@ -1,10 +1,10 @@
 <template>
   <div class="Blog row m-auto">
     <div class="col-10 m-auto text-center">
-      <div class="card mx-auto mt-5">
+      <div class="card bg-info mx-auto mt-5">
         <div class="row">
           <div class="col-11 text-left">
-            <button class="btn btn-dark" @click="$router.push({name:'Home'})">Home</button>
+            <button class="btn btn-dark shadow" @click="$router.push({name:'Home'})">Home</button>
           </div>
           <div class="col-1 text-right">
             <button
@@ -32,7 +32,7 @@
               <button
                 type="submit"
                 v-if="$auth.userInfo.email == blog.creator.email"
-                class="btn btn-warning shadow"
+                class="btn btn-primary shadow"
               >Confirm</button>
             </form>
             </span>

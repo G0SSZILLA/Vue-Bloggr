@@ -3,7 +3,7 @@
     <!-- Card -->
     <div class="card shadow bg-white">
       <!-- Card content -->
-      <div class="card-body">
+      <div class="card-body text-center">
         <!-- Title -->
         <h4 class="card-title text-center">
           <a>Start Blogging!</a>
@@ -19,7 +19,7 @@
           <input type="text" class="form-control" placeholder="Blog Body..." v-model="newBlog.body" />
         </p>
         <!-- Button -->
-        <button type="button" class="btn btn-primary" @click="addBlog()">Add Blog</button>
+        <button type="button" class="btn btn-primary border-0 shadow" @click="addBlog()">Add Blog</button>
       </div>
     </div>
   </div>

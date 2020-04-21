@@ -1,6 +1,6 @@
 <template>
   <div class=" blog col-4" @click="selectBlog()">
-    <div class="card card-cascade wider mb-4">
+    <div class="card bg-info card-cascade wider mb-4">
       <div class="view view-cascade overlay">
         <a href="#!">
           <div class="mask rgba-white-slight"></div>

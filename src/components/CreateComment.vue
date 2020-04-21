@@ -7,10 +7,10 @@
           name="body"
           v-model="newComment.body"
           class="form-control"
-          required
+          required 
           placeholder="comment here..."
         />
-        <button type="sumbit" class="btn btn-success">Send</button>
+        <button type="sumbit" class="btn btn-primary border-0 shadow">Send</button>
       
       
       </div>
