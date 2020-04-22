@@ -11,7 +11,7 @@
               v-if="$auth.userInfo.email == blog.creatorEmail"
               class="btn btn-danger shadow"
               @click="deleteBlog()"
-            >Delete</button>
+            >X</button>
           </div>
         </div>
         <div class="card-body">

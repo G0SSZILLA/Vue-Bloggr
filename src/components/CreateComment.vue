@@ -10,7 +10,8 @@
           required 
           placeholder="comment here..."
         />
-        <button type="sumbit" class="btn btn-primary border-0 shadow">Send</button>
+       
+        <button type="sumbit" class="btn btn-primary border-0 shadow mt-2">Send</button>
       
       
       </div>

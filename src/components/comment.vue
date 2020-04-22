@@ -1,5 +1,6 @@
 <template>
-  <div class="comment container-fluid">
+
+  <div class="comment container-fluid mt-2">
     <div class="row">
       <div class="col-10 text-center m-auto">
         <div v-if="editing" class="card card-body bg-secondary shadow">
