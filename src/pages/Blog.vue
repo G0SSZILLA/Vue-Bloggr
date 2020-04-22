@@ -16,6 +16,7 @@
         </div>
         <div class="card-body">
           <div class="card-title">
+            
             <h5>{{blog.creator.name}}</h5>
             <h4>{{blog.title}}</h4>
             <h2>{{blog.body}}</h2>
