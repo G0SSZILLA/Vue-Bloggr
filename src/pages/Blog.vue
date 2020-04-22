@@ -17,8 +17,8 @@
         <div class="card-body">
           <div class="card-title">
             <h5>{{blog.creator.name}}</h5>
-            <h3>{{blog.title}}</h3>
-            <h1>{{blog.body}}</h1>
+            <h4>{{blog.title}}</h4>
+            <h2>{{blog.body}}</h2>
             <hr>
             <createComment v-if="$auth.isAuthenticated"></createComment>
 
